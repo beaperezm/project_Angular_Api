@@ -1,0 +1,4 @@
+/node_modules
+.env
+dinos.seed.js
+historicalPeriod.seed.js
