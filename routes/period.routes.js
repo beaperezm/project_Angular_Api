@@ -10,7 +10,7 @@ const periodRouter = express.Router();
 
 periodRouter.get('/', async (req, res, next) => {
     try {
-        const period = await Period.find().populate('dinosaur');
+        const period = await Period.find().populate('Dinosaur');
         return res.status(200).json(period);
     } catch (err) {
         next(err); 
