@@ -58,7 +58,7 @@ server.get('/', (req, res) => {
 
 server.use('/user', userRouter);
 server.use('/dinosaurs', dinosRouter);
-server.use('/historicalPeriod', periodRouter);
+server.use('/historicalperiod', periodRouter);
 server.use('*', (req, res, next) => {
   next(createError('Esta ruta no existe', 404));
 });

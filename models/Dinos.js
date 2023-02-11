@@ -23,7 +23,7 @@ const dinoSchema = new mongoose.Schema({
     locomotion: { 
         type: [String], 
         enum: {
-        values: ["Cuadrúpedo", "Bípedo"],
+        values: ["Cuadrúpedo", "Bípedo", "Aéreo"],
         message: "Esta no es una forma de locomoción válida."
                },
         lowercase: true
