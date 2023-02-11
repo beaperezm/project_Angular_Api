@@ -20,8 +20,8 @@ dinosRouter.get('/', async (request, response, next) => {
 dinosRouter.get('/paged', async (request, response, next) => {
     try {
         let page = request.query.page;
-        const startPage = (page - 1) * 3;
-        const endPage = page * 3;
+        const startPage = (page - 1) * 9;
+        const endPage = page * 9;
         const allDinos = await Dino.find({}, { createdAt: 0, updatedAt: 0, __v: 0 }).sort({ year: 1 });
         if (allDinos.length === 0) {
             return next(createError('No hay series disponibles', 404))
@@ -30,9 +30,9 @@ dinosRouter.get('/paged', async (request, response, next) => {
             return next(createError('No se ha indicado un número de página valido', 404))
         }
         page = parseInt(page, 10);
-        const pagedSeries = allDinos.slice(0, 3);
-        const maxPage = Math.ceil(allDinos.length / 3);
-        if (page <= 0 || (page - 1) * 3 > allDinos.length - 1) {
+        const pagedSeries = allDinos.slice(0, 9);
+        const maxPage = Math.ceil(allDinos.length / 9);
+        if (page <= 0 || (page - 1) * 9 > allDinos.length - 1) {
             return response.status(404).json(`La página no existe, la primera página es: 1 y la ultima pagina es : ${maxPage}`);
         }
         response.status(200).json({
