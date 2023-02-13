@@ -288,5 +288,68 @@
         "Junto con Tyrannosaurus y Stegosaurus , Iguanodon fue uno de los géneros de dinosaurios que inspiró la aparición de Godzilla.", 
         "1989 CB3, un asteroide del cinturón principal, recibió el nombre de 9941 Iguanodon."
       ]
+    },
+    {
+      "id": 14,
+      "name": "BORRAR_1",
+      "nameMeaning": "Diente de iguana",
+      "type": "Hervíboro",
+      "weight": "3628 a 4536 kilogramos",
+      "length": "6 a 10 metros",
+      "height": "2,7 a 3 metros",
+      "historicalPeriod": "Vivió en el Período Cretácico",
+      "picture": "https://res.cloudinary.com/dpqw97rqh/image/upload/v1676142680/iguanodon_iocjoz.png",
+      "foundIn": ["Bélgica", "Inglaterra", "España", "Francia"],
+      "diet": "Se cree que comían principalmente equisetos y coníferas",
+      "characteristics": "Tenía un cráneo largo y estrecho con un pico desdentado. Sin embargo, su mejilla estaba repleta de dientes apretados que eran similares a los de las iguanas, pero un poco más grandes. Tenían manos largas y robustas pero inflexibles. Tenía cuatro dedos en las patas delanteras junto con una punta cónica. Al principio se creía que las púas estaban presentes en la nariz de los animales, pero más tarde los investigadores sugirieron que estaban cerca de los dedos de sus patas delanteras. Las extremidades anteriores eran más pequeñas que las posteriores. Cada pie tenía tres dedos. Sus piernas eran piernas, pero no estaban hechas para correr",
+      "locomotion": "Cuadrúpedo",
+      "habitat": "Llanuras del bosque",
+      "facts": [
+        "Ha aparecido en varios documentales, películas y series de televisión, como la película de Disney Dinosaur, Walking with Dinosaurs de la BBC , Dinosaur Planet y Raptor Red, entre otros.",
+        "Junto con Tyrannosaurus y Stegosaurus , Iguanodon fue uno de los géneros de dinosaurios que inspiró la aparición de Godzilla.", 
+        "1989 CB3, un asteroide del cinturón principal, recibió el nombre de 9941 Iguanodon."
+      ]
+    },
+    {
+      "id": 15,
+      "name": "BORRAR_2",
+      "nameMeaning": "Diente de iguana",
+      "type": "Hervíboro",
+      "weight": "3628 a 4536 kilogramos",
+      "length": "6 a 10 metros",
+      "height": "2,7 a 3 metros",
+      "historicalPeriod": "Vivió en el Período Cretácico",
+      "picture": "https://res.cloudinary.com/dpqw97rqh/image/upload/v1676142680/iguanodon_iocjoz.png",
+      "foundIn": ["Bélgica", "Inglaterra", "España", "Francia"],
+      "diet": "Se cree que comían principalmente equisetos y coníferas",
+      "characteristics": "Tenía un cráneo largo y estrecho con un pico desdentado. Sin embargo, su mejilla estaba repleta de dientes apretados que eran similares a los de las iguanas, pero un poco más grandes. Tenían manos largas y robustas pero inflexibles. Tenía cuatro dedos en las patas delanteras junto con una punta cónica. Al principio se creía que las púas estaban presentes en la nariz de los animales, pero más tarde los investigadores sugirieron que estaban cerca de los dedos de sus patas delanteras. Las extremidades anteriores eran más pequeñas que las posteriores. Cada pie tenía tres dedos. Sus piernas eran piernas, pero no estaban hechas para correr",
+      "locomotion": "Cuadrúpedo",
+      "habitat": "Llanuras del bosque",
+      "facts": [
+        "Ha aparecido en varios documentales, películas y series de televisión, como la película de Disney Dinosaur, Walking with Dinosaurs de la BBC , Dinosaur Planet y Raptor Red, entre otros.",
+        "Junto con Tyrannosaurus y Stegosaurus , Iguanodon fue uno de los géneros de dinosaurios que inspiró la aparición de Godzilla.", 
+        "1989 CB3, un asteroide del cinturón principal, recibió el nombre de 9941 Iguanodon."
+      ]
+    },
+    {
+      "id": 16,
+      "name": "BORRAR_3",
+      "nameMeaning": "Diente de iguana",
+      "type": "Hervíboro",
+      "weight": "3628 a 4536 kilogramos",
+      "length": "6 a 10 metros",
+      "height": "2,7 a 3 metros",
+      "historicalPeriod": "Vivió en el Período Cretácico",
+      "picture": "https://res.cloudinary.com/dpqw97rqh/image/upload/v1676142680/iguanodon_iocjoz.png",
+      "foundIn": ["Bélgica", "Inglaterra", "España", "Francia"],
+      "diet": "Se cree que comían principalmente equisetos y coníferas",
+      "characteristics": "Tenía un cráneo largo y estrecho con un pico desdentado. Sin embargo, su mejilla estaba repleta de dientes apretados que eran similares a los de las iguanas, pero un poco más grandes. Tenían manos largas y robustas pero inflexibles. Tenía cuatro dedos en las patas delanteras junto con una punta cónica. Al principio se creía que las púas estaban presentes en la nariz de los animales, pero más tarde los investigadores sugirieron que estaban cerca de los dedos de sus patas delanteras. Las extremidades anteriores eran más pequeñas que las posteriores. Cada pie tenía tres dedos. Sus piernas eran piernas, pero no estaban hechas para correr",
+      "locomotion": "Cuadrúpedo",
+      "habitat": "Llanuras del bosque",
+      "facts": [
+        "Ha aparecido en varios documentales, películas y series de televisión, como la película de Disney Dinosaur, Walking with Dinosaurs de la BBC , Dinosaur Planet y Raptor Red, entre otros.",
+        "Junto con Tyrannosaurus y Stegosaurus , Iguanodon fue uno de los géneros de dinosaurios que inspiró la aparición de Godzilla.", 
+        "1989 CB3, un asteroide del cinturón principal, recibió el nombre de 9941 Iguanodon."
+      ]
     }
 ]

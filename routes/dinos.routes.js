@@ -3,37 +3,51 @@ const Dino = require('../models/Dinos.js');
 const createError = require('../utils/errors/create-error.js');
 const isAuthPassport = require('../utils/middlewares/auth.middleware.js');
 const upload = require('../utils/middlewares/file.middleware.js');
-const fs= require('fs');
+const fs = require('fs');
 const uploadToCloudinary = require('../utils/middlewares/cloudinary.middleware.js')
 
 const dinosRouter = express.Router();
 
-dinosRouter.get('/', async (request, response, next) => {
+dinosRouter.get('/', async (req, res, next) => {
     try {
         const allDinos = await Dino.find();
-        return response.status(200).json(allDinos);
+        return res.status(200).json(allDinos);
     } catch (error) {
         next(error)
     }
 });
 
-dinosRouter.get('/paged', async (request, response, next) => {
+dinosRouter.get('/:id', async (req, res, next) => {
+    const id = req.params.id;
     try {
-        let page = request.query.page;
+        const dino = await new Dino.findById(id);
+        if(dino) {
+            return res.status(200).json(dino);
+        } else {
+            next(createError("No existe un dinosaurio con ese id", 404));
+        }
+    } catch (err) {
+        next(err);
+    }
+});
+
+dinosRouter.get('/page', async (req, res, next) => {
+    try {
+        let page = req.query.page;
         const startPage = (page - 1) * 9;
         const endPage = page * 9;
         const allDinos = await Dino.find({}, { createdAt: 0, updatedAt: 0, __v: 0 }).sort({ year: 1 });
         if (allDinos.length === 0) {
-            return next(createError('No hay series disponibles', 404))
+            return next(createError('No hay dinosaurios disponibles', 404))
         }
         if (!page) {
-            return next(createError('No se ha indicado un número de página valido', 404))
+            return next(createError('Tienes que indicar un número de página válido', 404))
         }
         page = parseInt(page, 10);
         const pagedSeries = allDinos.slice(0, 9);
         const maxPage = Math.ceil(allDinos.length / 9);
         if (page <= 0 || (page - 1) * 9 > allDinos.length - 1) {
-            return response.status(404).json(`La página no existe, la primera página es: 1 y la ultima pagina es : ${maxPage}`);
+            return response.status(404).json(`La página indicada no existe, la primera página es la 1 y la ultima pagina es la ${maxPage}`);
         }
         response.status(200).json({
             dinos: allDinos.slice(startPage, endPage),
@@ -45,9 +59,9 @@ dinosRouter.get('/paged', async (request, response, next) => {
     }
 });
 
-dinosRouter.get('/name/:name', async (request, response, next) => {
+dinosRouter.get('/name/:name', async (req, res, next) => {
     try {
-        const nameDino = request.params.name;
+        const nameDino = req.params.name;
         const dino = await Dino.find({ name: nameDino });
         if (dino.length === 0) {
             return next(createError(`No hay ningún dinosaurio con ese nombre: ${nameDino}`, 404))
@@ -71,10 +85,10 @@ async (request, response, next) => {
     }
   });
 
-dinosRouter.put('/:id', [isAuthPassport], async (request, response, next) => {
+dinosRouter.put('/:id', [isAuthPassport], async (req, res, next) => {
     try {
-        const id = request.params.id;
-        const modifiedDino = new Dino({ ...request.body });
+        const id = req.params.id;
+        const modifiedDino = new Dino({ ...req.body });
         modifiedDino._id = id;
         const updatedDino = await Dino.findByIdAndUpdate(
             id,
@@ -90,9 +104,9 @@ dinosRouter.put('/:id', [isAuthPassport], async (request, response, next) => {
     }
 });
 
-dinosRouter.delete('/:id', [isAuthPassport], async (request, response, next) => {
+dinosRouter.delete('/:id', [isAuthPassport], async (req, res, next) => {
     try {
-        const id = request.params.id;
+        const id = req.params.id;
        
         const deletedDino = await Dino.findByIdAndDelete(id);
         if (!deletedDino) {
