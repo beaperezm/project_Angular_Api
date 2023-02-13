@@ -1,6 +1,5 @@
 [
     {
-      "id": 1,
       "name": "Braquiosaurio",
       "nameMeaning": "Lagarto del brazo",
       "type": "Hervíboro",
@@ -22,7 +21,6 @@
         "Ha aparecido en varios documentales y películas, como Walking with Dinosaurs , Jurassic Park, etc."]
     },
     {
-      "id": 2,
       "name": "Diplodocus",
       "nameMeaning": "Doble viga",
       "type": "Hervíboro",
@@ -43,7 +41,6 @@
         "El nombre artístico del DJ estadounidense, productor discográfico, rapero y compositor Thomas Wesley Pentz, Diplo, está inspirado en Diplodocus."]
     },
     {
-      "id": 3,
       "name": "Stegosaurus",
       "nameMeaning": "Lagarto de techo",
       "type": "Hervíboro",
@@ -65,7 +62,6 @@
         "Alguna vez se pensó que caminaba sobre dos patas."]
     },
     {
-      "id": 4,
       "name": "Triceratops",
       "nameMeaning": "Cara de tres cuernos",
       "type": "Hervíboro",
@@ -87,7 +83,6 @@
         "Los fósiles son artículos preciados de coleccionista."]
     },
     {
-      "id": 5,
       "name": "Protoceratops",
       "nameMeaning": "Primera cara con cuernos",
       "type": "Hervíboro",
@@ -109,7 +104,6 @@
         "Tenía un pico de loro y dientes en las mejillas."]
     },
     {
-      "id": 6,
       "name": "Troodon",
       "nameMeaning": "Diente hiriente",
       "type": "Carnívoro",
@@ -132,7 +126,6 @@
         "Se representaba como un dinosaurio con la piel desnuda. Pero los investigadores modernos sugieren que su cuerpo estaba cubierto de plumas primitivas."]
     },
     {
-      "id": 7,
       "name": "Utahraptor",
       "nameMeaning": "Ladrón de Utah",
       "type": "Carnívoro",
@@ -155,7 +148,6 @@
       ]
     },
     {
-      "id": 8,
       "name": "Velociraptor",
       "nameMeaning": "Ladrón o saqueador rápido",
       "type": "Carnívoro",
@@ -178,7 +170,6 @@
       ]
     },
     {
-      "id": 9,
       "name": "Deinonychus",
       "nameMeaning": "Garra terrible con contrapeso",
       "type": "Carnívoro",
@@ -201,7 +192,6 @@
       ]
     },
     {
-      "id": 10,
       "name": "Tyrannosaurus Rex",
       "nameMeaning": "Rey de los lagartos tiranos",
       "type": "Carnívoro",
@@ -224,7 +214,6 @@
       ]
     },
     {
-      "id": 11,
       "name": "Archaeopteryx",
       "nameMeaning": "Primer pájaro' o Pájaro original",
       "type": "Carnívoro",
@@ -246,7 +235,6 @@
       ]
     },
     {
-      "id": 12,
       "name": "Dilophosaurus",
       "nameMeaning": "Lagarto de doble cresta",
       "type": "Carnívoro",
@@ -269,7 +257,6 @@
       ]
     },
     {
-      "id": 13,
       "name": "Iguanodon",
       "nameMeaning": "Diente de iguana",
       "type": "Hervíboro",
@@ -290,7 +277,6 @@
       ]
     },
     {
-      "id": 14,
       "name": "BORRAR_1",
       "nameMeaning": "Diente de iguana",
       "type": "Hervíboro",
@@ -311,7 +297,6 @@
       ]
     },
     {
-      "id": 15,
       "name": "BORRAR_2",
       "nameMeaning": "Diente de iguana",
       "type": "Hervíboro",
@@ -332,7 +317,6 @@
       ]
     },
     {
-      "id": 16,
       "name": "BORRAR_3",
       "nameMeaning": "Diente de iguana",
       "type": "Hervíboro",
