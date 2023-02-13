@@ -18,7 +18,7 @@ dinosRouter.get('/', async (req, res, next) => {
 });
 
 dinosRouter.get('/:id', async (req, res, next) => {
-    const id = req.params._id;
+    const id = req.params.id;
     try {
         const dino = await new Dino.findById(id);
         if(dino) {
