@@ -1,18 +1,15 @@
 [
     {
-      "id": 1,
       "period": "Período Triásico",
       "stage": "252-201 millones de años a.C",
       "description": "La gran mayoría de los dinosaurios aparecieron a finales del Período Triásico, momento en el que Pangea se dividiría en dos debido a una serie de terremotos y erupciones volcánicas. Entre ellos destacan los terópodos y los prosaurópodos. Con el paso del tiempo, los dinosaurios comenzaron a colonizar la tierra, debido a la ausencia de competencia y con nichos ecológicos vacíos. Entre los dinosaurios más comunes del Triásico están el Lystrosaurus, el Cynognathus, el Ornithosuchus, el Herrerasaurus y el Plateosaurus. A finales del periodo Triásico se produjo una desaparición de especies masiva, pero ésta no afectó a los dinosaurios. Aunque las causas son objeto de gran debate la comunidad científica, se sabe que los dinosaurios sobrevivieron."
     },
     {
-        "id": 2,
         "period": "Período Jurásico",
         "stage": "201-145 millones de años a.C.",
         "description": "Debido a la proliferación de zonas de vegetación en este período, los dinosaurios pudieron evolucionar y aumentar en población. El clima cambió ya que bajaron las temperaturas ligeramente. Las menores temperaturas fueron acompañadas de grandes precipitaciones, que aumentaron debido a los grandes mares que aparecieron entre las masas de tierra. Estos cambios climáticos provocaron la proliferación de plantas como helechos, que se convirtieron las actuales fuentes de combustibles fósiles.Los dinosaurios del Período Jurásico más importantes fueron el Apatosaurus, el Diplodocus y el Brachiosaurus. Se trata de algunos de los animales más grandes que han recorrido la faz de la Tierra."
       },
       {
-        "id": 3,
         "period": "Período Cretácico",
         "stage": "145-66 millones de años",
         "description": "Es el período geológico en el que se produjo la desaparición de los dinosaurios y otras muchas especies de fauna y flora. En el período Cretácico, la Tierra se volvió a dividir hasta formar los continentes que conocemos hoy, aunque en diferentes posiciones. De esta forma, los dinosaurios evolucionaron de forma independiente en diferentes partes del mundo, volviéndose más diversos. Algunos de los dinosaurios más conocidos de este período son el Protoceratops, el Triceratops, el Pachycephalosaurus, el Baryonyx, el Tyrannosaurus o el Velociraptor. La evolución de los dinosaurios termina en este período geológico. Al finalizar el período Cretácico la mayoría de la fauna, tanto terrestre como marina, incluyendo todas las especies de dinosaurios, sufrió la desaparición masiva."
