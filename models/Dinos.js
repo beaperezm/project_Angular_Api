@@ -5,7 +5,7 @@ const dinoSchema = new mongoose.Schema({
     name: { type: String, required: true },
     nameMeaning: { type: String, required: true },
     type: { 
-        type: [String], 
+        type: String, 
         enum: {
         values: ["Hervíboro", "Carnívoro", "Onmívoro"],
         message: "Este no es un tipo válido."
@@ -21,7 +21,7 @@ const dinoSchema = new mongoose.Schema({
     diet: { type: String, required: true },
     characteristics: { type: String, required: true },
     locomotion: { 
-        type: [String], 
+        type: String, 
         enum: {
         values: ["Cuadrúpedo", "Bípedo", "Aéreo"],
         message: "Esta no es una forma de locomoción válida."
