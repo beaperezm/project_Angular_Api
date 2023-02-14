@@ -47,9 +47,9 @@ dinosRouter.get('/paged', async (req, res, next) => {
         const pagedSeries = allDinos.slice(0, 9);
         const maxPage = Math.ceil(allDinos.length / 9);
         if (page <= 0 || (page - 1) * 9 > allDinos.length - 1) {
-            return response.status(404).json(`La página indicada no existe, la primera página es la 1 y la ultima pagina es la ${maxPage}`);
+            return res.status(404).json(`La página indicada no existe, la primera página es la 1 y la ultima pagina es la ${maxPage}`);
         }
-        response.status(200).json({
+        res.status(200).json({
             dinos: allDinos.slice(startPage, endPage),
             nextPage: page + 1 <= maxPage ? page + 1 : null,
             previousPage: page - 1 < 1 ? null : page - 1
@@ -66,19 +66,19 @@ dinosRouter.get('/name/:name', async (req, res, next) => {
         if (dino.length === 0) {
             return next(createError(`No hay ningún dinosaurio con ese nombre: ${nameDino}`, 404))
         }
-        return response.status(200).json(dino);
+        return res.status(200).json(dino);
     } catch (error) {
         next(error)
     }
 });
 
 dinosRouter.post('/to-cloud', [upload.single('picture'), uploadToCloudinary], 
-async (request, response, next) => {
+async (req, res, next) => {
 
     try {
-      const newDino = new Dino({ ...request.body, picture: request.file_url });
+      const newDino = new Dino({ ...req.body, picture: req.file_url });
       const createdDino = await newDino.save();
-      return response.status(201).json(createdDino);
+      return res.status(201).json(createdDino);
   
     } catch (err) {
       next(err);
@@ -98,7 +98,7 @@ dinosRouter.put('/:id', async (req, res, next) => {
         if (!updatedDino) {
             return next(createError(`No se encuentra el dinosaurio con el Id: ${id} para actualizarlo`, 404))
         }
-        return response.status(201).json(updatedDino);
+        return res.status(201).json(updatedDino);
     } catch (error) {
         next(error)
     }
@@ -112,7 +112,7 @@ dinosRouter.delete('/:id', async (req, res, next) => {
         if (!deletedDino) {
             return next(createError(`No se encuentra el dinosaurio con el Id: ${id} para eliminarlo`, 404))
         } else {
-            return response.status(200).json('Dinosaurio eliminado con éxito');
+            return res.status(200).json('Dinosaurio eliminado con éxito');
         }
     } catch (error) {
         next(error)
