@@ -7,7 +7,7 @@ const dinoSchema = new mongoose.Schema({
     type: { 
         type: [String], 
         enum: {
-        values: ["Herbívoro", "Carnívoro", "Onmívoro"],
+        values: ["Herbívoro", "Carnívoro", "Omnívoro"],
         message: "Este no es un tipo válido."
                },
         lowercase: true
