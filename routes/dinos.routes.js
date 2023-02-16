@@ -76,7 +76,7 @@ dinosRouter.post('/', [upload.single('picture'), uploadToCloudinary],
 async (req, res, next) => {
 
     try {
-      const newDino = new Dino({ ...req.body, picture: req.file_url });
+      const newDino = new Dino({ ...req.body});
       const createdDino = await newDino.save();
       return res.status(201).json(createdDino);
   
