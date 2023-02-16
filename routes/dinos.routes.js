@@ -72,7 +72,7 @@ dinosRouter.get('/name/:name', async (req, res, next) => {
     }
 });
 
-dinosRouter.post('/to-cloud', [upload.single('picture'), uploadToCloudinary], 
+dinosRouter.post('/', [upload.single('picture'), uploadToCloudinary], 
 async (req, res, next) => {
 
     try {
