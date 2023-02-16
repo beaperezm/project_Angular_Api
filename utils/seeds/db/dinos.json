@@ -2,7 +2,7 @@
     {
       "name": "Braquiosaurio",
       "nameMeaning": "Lagarto del brazo",
-      "type": "Hervíboro",
+      "type": "Herbívoro",
       "weight": "33000 a 88000 kilogramos",
       "length": "26-30 metros",
       "height": "12 a 15 metros",
@@ -23,7 +23,7 @@
     {
       "name": "Diplodocus",
       "nameMeaning": "Doble viga",
-      "type": "Hervíboro",
+      "type": "Herbívoro",
       "weight": "30000 a 50000 kilogramos",
       "length": "36 metros",
       "height": "4,8 metros",
@@ -43,7 +43,7 @@
     {
       "name": "Stegosaurus",
       "nameMeaning": "Lagarto de techo",
-      "type": "Hervíboro",
+      "type": "Herbívoro",
       "weight": "3800 a 7000 kilogramos",
       "length": "9 metros",
       "height": "4 metros",
@@ -64,7 +64,7 @@
     {
       "name": "Triceratops",
       "nameMeaning": "Cara de tres cuernos",
-      "type": "Hervíboro",
+      "type": "Herbívoro",
       "weight": "6100 a 12000 kilogramos",
       "length": "7,9 a 9 metros",
       "height": "3 metros",
@@ -85,7 +85,7 @@
     {
       "name": "Protoceratops",
       "nameMeaning": "Primera cara con cuernos",
-      "type": "Hervíboro",
+      "type": "Herbívoro",
       "weight": "23700 a 82700 kilogramos",
       "length": "1,8 metros",
       "height": "60 centímetros",
@@ -259,7 +259,7 @@
     {
       "name": "Iguanodon",
       "nameMeaning": "Diente de iguana",
-      "type": "Hervíboro",
+      "type": "Herbívoro",
       "weight": "3628 a 4536 kilogramos",
       "length": "6 a 10 metros",
       "height": "2,7 a 3 metros",
@@ -279,7 +279,7 @@
     {
       "name": "BORRAR_1",
       "nameMeaning": "Diente de iguana",
-      "type": "Hervíboro",
+      "type": "Herbívoro",
       "weight": "3628 a 4536 kilogramos",
       "length": "6 a 10 metros",
       "height": "2,7 a 3 metros",
@@ -299,7 +299,7 @@
     {
       "name": "BORRAR_2",
       "nameMeaning": "Diente de iguana",
-      "type": "Hervíboro",
+      "type": "Herbívoro",
       "weight": "3628 a 4536 kilogramos",
       "length": "6 a 10 metros",
       "height": "2,7 a 3 metros",
@@ -319,7 +319,7 @@
     {
       "name": "BORRAR_3",
       "nameMeaning": "Diente de iguana",
-      "type": "Hervíboro",
+      "type": "Herbívoro",
       "weight": "3628 a 4536 kilogramos",
       "length": "6 a 10 metros",
       "height": "2,7 a 3 metros",

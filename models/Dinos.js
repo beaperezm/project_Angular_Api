@@ -7,7 +7,7 @@ const dinoSchema = new mongoose.Schema({
     type: { 
         type: [String], 
         enum: {
-        values: ["Hervíboro", "Carnívoro", "Onmívoro"],
+        values: ["Herbívoro", "Carnívoro", "Onmívoro"],
         message: "Este no es un tipo válido."
                },
         lowercase: true
@@ -16,7 +16,7 @@ const dinoSchema = new mongoose.Schema({
     length: { type: String, required: true },
     height: { type: String, required: true },
     historicalPeriod: { type: String, required: true },
-    picture: { type: String, required: true },
+    picture: { type: String },
     foundIn: { type: [String]},
     diet: { type: String },
     characteristics: { type: String, required: true },
