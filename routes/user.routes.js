@@ -39,6 +39,7 @@ userRouter.post('/login', (req, res, next) => {
     passport.authenticate('login', done)(req);
 });
 
+
 userRouter.post('/logout', (req, res, next) => {
     if(req.user) {
         req.logOut(() => {

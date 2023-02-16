@@ -18,7 +18,7 @@ const dinoSchema = new mongoose.Schema({
     historicalPeriod: { type: String, required: true },
     picture: { type: String, required: true },
     foundIn: { type: [String]},
-    diet: { type: String, required: true },
+    diet: { type: String },
     characteristics: { type: String, required: true },
     locomotion: { 
         type: [String], 
