@@ -28,7 +28,7 @@ cloudinary.config({
 });
 
 //dominios donde está desplegado el frontal
-const whitelist = ['http://localhost:3000', 'http://localhost:4200']
+const whitelist = ['http://localhost:3000', 'https://project-angular-api-f9ie.vercel.app', 'http://localhost:4200']
 const corsOptions = {
   credentials: true,
   origin: function(origin, callback) {
