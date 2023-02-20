@@ -28,19 +28,19 @@ cloudinary.config({
 });
 
 //dominios donde está desplegado el frontal
-// constwhitelist = ['http://localhost:3000', 'http://localhost:4200']
-// const corsOptions = {
-//   credentials: true,
-//   origin: function(origin, callback) {
-//     if (whitelist.indexOf(origin) !== -1) {
-//     callback(null, true)
-//   } else {
-//     callback(new Error('not allowed by Cors'))
-//   }
-//   }
-// };
-server.use(cors());
-// server.use(cors(corsOptions));
+const whitelist = ['http://localhost:3000', 'http://localhost:4200']
+const corsOptions = {
+  credentials: true,
+  origin: function(origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+    callback(null, true)
+  } else {
+    callback(new Error('Not allowed by Cors'))
+  }
+  }
+};
+//server.use(cors());
+server.use(cors(corsOptions));
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));

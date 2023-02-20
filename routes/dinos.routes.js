@@ -72,7 +72,7 @@ dinosRouter.get('/name/:name', async (req, res, next) => {
     }
 });
 
-dinosRouter.post('/', [upload.single('picture'), uploadToCloudinary], 
+dinosRouter.post('/', [isAuthPassport], [upload.single('picture'), uploadToCloudinary], 
 async (req, res, next) => {
 
     try {
@@ -85,7 +85,7 @@ async (req, res, next) => {
     }
   });
 
-dinosRouter.put('/:id', async (req, res, next) => {
+dinosRouter.put('/:id', [isAuthPassport], async (req, res, next) => {
     try {
         const id = req.params.id;
         const modifiedDino = new Dino({ ...req.body });
@@ -104,7 +104,7 @@ dinosRouter.put('/:id', async (req, res, next) => {
     }
 });
 
-dinosRouter.delete('/:id', async (req, res, next) => {
+dinosRouter.delete('/:id', [isAuthPassport], async (req, res, next) => {
     try {
         const id = req.params.id;
        
