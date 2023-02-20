@@ -40,9 +40,9 @@ userRouter.post('/login', (req, res, next) => {
 });
 
 //Cuando se haga petición con passport va a permitir controlar si el user está logueado
-userRouter.get('/auth', [isAuthPassport], (req, res, next) => {
-    return res.status(200).json(req.user);
-});
+// userRouter.get('/auth', [isAuthPassport], (req, res, next) => {
+//     return res.status(200).json(req.user);
+// });
 
 
 userRouter.post('/logout', (req, res, next) => {
