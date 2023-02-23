@@ -11,6 +11,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const path = require('path');
 const cloudinary = require('cloudinary');
+const yourDinosRouter = require('./routes/yourDinos.routes.js')
 
 const DB_URL = process.env.DB_URL;
 
@@ -27,20 +28,7 @@ cloudinary.config({
   api_secret: process.env.CLOUD_SECRET
 });
 
-//dominios donde está desplegado el frontal
-// const whitelist = ['http://localhost:3000', 'https://project-angular-api-f9ie.vercel.app', 'http://localhost:4200']
-// const corsOptions = {
-//   credentials: true,
-//   origin: function(origin, callback) {
-//     if (whitelist.indexOf(origin) !== -1) {
-//     callback(null, true)
-//   } else {
-//     callback(new Error('Not allowed by Cors'))
-//   }
-//   }
-// };
 server.use(cors());
-//server.use(cors(corsOptions));
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
@@ -71,6 +59,7 @@ server.get('/', (req, res) => {
 
 server.use('/user', userRouter);
 server.use('/dinosaurs', dinosRouter);
+server.use('/yourDinosaurs', yourDinosRouter);
 server.use('/historicalperiod', periodRouter);
 server.use('*', (req, res, next) => {
   next(createError('Esta ruta no existe', 404));

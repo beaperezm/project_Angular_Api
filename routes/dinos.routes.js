@@ -1,6 +1,7 @@
 const express = require ('express');
 const Dino = require('../models/Dinos.js');
 const createError = require('../utils/errors/create-error.js');
+const isAuthJWT = require('../utils/middlewares/auth-jwt.middleware.js');
 const isAuthPassport = require('../utils/middlewares/auth.middleware.js');
 const upload = require('../utils/middlewares/file.middleware.js');
 const fs = require('fs');
@@ -34,8 +35,8 @@ dinosRouter.get('/:id', async (req, res, next) => {
 dinosRouter.get('/paged', async (req, res, next) => {
     try {
         let page = req.query.page;
-        const startPage = (page - 1) * 9;
-        const endPage = page * 9;
+        const startPage = (page - 1) * 6;
+        const endPage = page * 6;
         const allDinos = await Dino.find({}, { createdAt: 0, updatedAt: 0, __v: 0 }).sort({ year: 1 });
         if (allDinos.length === 0) {
             return next(createError('No hay dinosaurios disponibles', 404))
@@ -44,9 +45,9 @@ dinosRouter.get('/paged', async (req, res, next) => {
             return next(createError('Tienes que indicar un número de página válido', 404))
         }
         page = parseInt(page, 10);
-        const pagedSeries = allDinos.slice(0, 9);
-        const maxPage = Math.ceil(allDinos.length / 9);
-        if (page <= 0 || (page - 1) * 9 > allDinos.length - 1) {
+        const pagedDinos = allDinos.slice(0, 6);
+        const maxPage = Math.ceil(allDinos.length / 6);
+        if (page <= 0 || (page - 1) * 6 > allDinos.length - 1) {
             return res.status(404).json(`La página indicada no existe, la primera página es la 1 y la ultima pagina es la ${maxPage}`);
         }
         res.status(200).json({
