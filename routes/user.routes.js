@@ -28,7 +28,7 @@ userRouter.post('/register', (req, res, next) => {
 
 
 userRouter.post('/login', async (req, res, next) => {
-    const { email, password, firstName, lastName } = req.body;
+    const { email, password, firstName } = req.body;
 
     const user = await User.findOne({ email });
     if (!user) {
@@ -38,11 +38,6 @@ userRouter.post('/login', async (req, res, next) => {
     const userFirstName = await User.findOne({ firstName });
     if (!userFirstName) {
         return next(createError('El nombre no existe'), 404);
-    }
-
-    const userLasttName = await User.findOne({ lastName });
-    if (!userLasttName) {
-        return next(createError('El apellido no existe'), 404);
     }
 
     const isValidPassword = await bcrypt.compare(password, user.password);
