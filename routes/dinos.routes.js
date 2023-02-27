@@ -2,7 +2,7 @@ const express = require ('express');
 const Dino = require('../models/Dinos.js');
 const createError = require('../utils/errors/create-error.js');
 const isAuthJWT = require('../utils/middlewares/auth-jwt.middleware.js');
-const isAuthPassport = require('../utils/middlewares/auth.middleware.js');
+//const isAuthPassport = require('../utils/middlewares/auth.middleware.js');
 const upload = require('../utils/middlewares/file.middleware.js');
 const fs = require('fs');
 const uploadToCloudinary = require('../utils/middlewares/cloudinary.middleware.js')
@@ -73,9 +73,7 @@ dinosRouter.get('/name/:name', async (req, res, next) => {
     }
 });
 
-dinosRouter.post('/', 
-//[isAuthPassport], 
-[upload.single('picture'), uploadToCloudinary], 
+dinosRouter.post('/', [isAuthJWT], [upload.single('picture'), uploadToCloudinary], 
 async (req, res, next) => {
 
     try {
@@ -88,9 +86,7 @@ async (req, res, next) => {
     }
   });
 
-dinosRouter.put('/:id', 
-//[isAuthPassport], 
-async (req, res, next) => {
+dinosRouter.put('/:id', [isAuthJWT], async (req, res, next) => {
     try {
         const id = req.params.id;
         const modifiedDino = new Dino({ ...req.body });
@@ -109,9 +105,7 @@ async (req, res, next) => {
     }
 });
 
-dinosRouter.delete('/:id', 
-//[isAuthPassport], 
-async (req, res, next) => {
+dinosRouter.delete('/:id', [isAuthJWT], async (req, res, next) => {
     try {
         const id = req.params.id;
        

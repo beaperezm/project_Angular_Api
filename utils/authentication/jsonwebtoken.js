@@ -5,11 +5,13 @@ const getJWT = (userInfo, secretKey) => {
         {
             id: userInfo._id,
             email: userInfo._email,
-            role: userInfo.role
+            role: userInfo.role,
+            firstName: userInfo.firstName,
+            lastName: userInfo.lastName
         },
         process.env.JWT_SECRET_KEY,
         {
-            expiresIn: "2h"
+            expiresIn: "4h"
         }
     );
 };

@@ -1,8 +1,6 @@
 const express = require('express');
 const Period = require('../models/Period.js');
 const createError = require('../utils/errors/create-error.js');
-const isAuthJWT = require('../utils/middlewares/auth-jwt.middleware.js');
-const isAuthPassportAdmin = require("../utils/middlewares/auth.middleware.js");
 const upload = require('../utils/middlewares/file.middleware.js');
 const fs = require('fs');
 const uploadToCloudinary = require('../utils/middlewares/cloudinary.middleware.js');
@@ -43,7 +41,7 @@ periodRouter.get("/paginated-period", async (req, res, next) => {
   });
 
 
-periodRouter.post('/', [isAuthPassportAdmin], async (req, res, next) => {
+periodRouter.post('/', async (req, res, next) => {
     try {
         const newPeriod = new Period({ ...req.body });
         const createdPeriod = await newPeriod.save();
@@ -54,7 +52,7 @@ periodRouter.post('/', [isAuthPassportAdmin], async (req, res, next) => {
 });
 
 
-periodRouter.put('/add-period', [isAuthPassportAdmin], async (req, res, next) => {
+periodRouter.put('/add-period', async (req, res, next) => {
     try {
         const { periodId, dinoId } = req.body;
         if(!periodId) {
@@ -75,7 +73,7 @@ periodRouter.put('/add-period', [isAuthPassportAdmin], async (req, res, next) =>
 });
 
 
-periodRouter.delete('/:id', [isAuthPassportAdmin], async (req, res, next) => {
+periodRouter.delete('/:id', async (req, res, next) => {
     try {
         const id = req.params.id;
         await Period.findByIdAndDelete(id);

@@ -10,7 +10,6 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: true, 
         // match: [/^(?=\w*\d)\S{6,}$/, 'La contraseña no tiene un formato válido (deberá de ser de más de 6 caracteres e incluir al menos un número)'] 
     },
-    confirmPassword: { type: String, required: true },
     picture: String,
     role: {type: String, enum: ['admin', 'user']},
     firstName: { type: String, required: true },

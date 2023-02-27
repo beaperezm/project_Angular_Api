@@ -1,8 +1,6 @@
 const express = require ('express');
 const YourDino = require('../models/YourDinos.js');
 const createError = require('../utils/errors/create-error.js');
-const isAuthJWT = require('../utils/middlewares/auth-jwt.middleware.js');
-const isAuthPassport = require('../utils/middlewares/auth.middleware.js');
 const upload = require('../utils/middlewares/file.middleware.js');
 const fs = require('fs');
 const uploadToCloudinary = require('../utils/middlewares/cloudinary.middleware.js')

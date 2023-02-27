@@ -22,6 +22,7 @@ const PORT = process.env.PORT || 3000;
 
 const server = express();
 
+
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
   api_key: process.env.CLOUD_API_KEY,
@@ -48,7 +49,6 @@ server.use(session({
       mongoUrl: DB_URL
   })
 }));
-
 server.use(passport.initialize());
 
 server.use(passport.session());

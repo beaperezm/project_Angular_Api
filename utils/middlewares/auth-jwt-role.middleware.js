@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const createError = require('../errors/create-error');
 
-const isAuthJWT = (req, res, next) => {
+const isAuthRoleJWT = (req, res, next) => {
     const authorization = req.headers.authorization;
     if (!authorization) {
         return next(createError("No estás autorizado", 401));
@@ -21,10 +21,12 @@ const isAuthJWT = (req, res, next) => {
     }
     req.authority = {
         id: payload.id,
-        email: payload.email,
-        firstName: payload.firstName
+        email: payload.email
+    };
+    if(payload.role !== 'admin' || payload.role !== 'user') {
+        return next(createError('No estás autorizado', 400))
     };
     next();
 };
 
-module.exports = isAuthJWT;
+module.exports = isAuthRoleJWT;
