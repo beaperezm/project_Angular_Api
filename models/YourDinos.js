@@ -15,7 +15,6 @@ const yourDinoSchema = new mongoose.Schema({
     weight: { type: String, required: true },
     length: { type: String, required: true },
     height: { type: String, required: true },
-    historicalPeriod: { type: String, required: true },
     picture: { type: String },
     characteristics: { type: String, required: true },
 }, {
